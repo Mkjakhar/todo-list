@@ -7,7 +7,9 @@ const TodoList = () => {
   const handleInput = (event) => {
     setTodoInput(event.target.value);
   };
-  const addTask = () => {};
+  const addTask = () => {
+    console.log("add task");
+  };
   return (
     <div className="min-vh-100 d-flex align-items-center justify-content-center todo_bg">
       <div className="container">
@@ -29,7 +31,7 @@ const TodoList = () => {
           </form>
           <div className="list_box rounded_8">
             {todoData.map((val, i) => (
-              <TodoDataLists val={val} index={i} />
+              <TodoDataLists val={val} key={i} />
             ))}
           </div>
         </div>
